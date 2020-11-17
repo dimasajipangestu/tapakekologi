@@ -7,6 +7,18 @@
 	totalRecovered: 0,
 	newDeaths: 0,
 	};
+	var globalInfo = {
+	totalCountryReserve: 51,
+	totalCountryDeficit: 136,
+	country_pr_reserve: 'French Guiana',
+	value_pr_reserve: '3983%',
+	country_pr_deficit: 'Singapore',
+	value_pr_deficit: '9948%',
+	country_highest_supply: 'French Guiana',
+	value_highest_supply: '97.11 gha',
+	country_highest_demand: 'Qatar',
+	value_highest_demand: '14.41 gha',
+	};
 
 
 	const processAPIData = data => {
@@ -103,7 +115,7 @@
       }; */
 	  
 	  const buildStatisticsList = () => {
-		var globalState = '<div class="col"><div class="icon-box"><div class="icon"><img src="images/icons/covid-defult.svg" alt=""/></div><div class="info"><h5>Total Confirmed</h5><h3>'+totalInformation.totalConfirmed+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="icon"><img src="images/icons/covid-green.svg" alt=""/></div><div class="info"><h5>Total Recovered</h5><h3>'+totalInformation.totalRecovered+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="icon"><img src="images/icons/covid-red.svg" alt=""/></div><div class="info"><h5>Total Deaths</h5><h3>'+totalInformation.totalDeaths+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="icon"><img src="images/icons/covid-redark.svg" alt=""/></div><div class="info"><h5>New Deaths</h5><h3>'+totalInformation.newDeaths+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="icon"><img src="images/icons/telephone.svg" alt=""/></div><div class="info"><h5>Help Line No.</h5><h3>198</h3></div></div></div>';
+		var globalState = '<div class="col"><div class="icon-box"><div class="info"><h4>Banyak Negara dengan Biokapasitas Cadangan</h4><h5>Berjumlah</h5><h3>'+globalInfo.totalCountryReserve+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="info"><h4>Banyak Negara dengan Biokapasitas Defisit</h4><h5>Berjumlah</h5><h3>'+globalInfo.totalCountryDeficit+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="info"><h4>Persentase Biokapasitas Cadangan Tertinggi</h4><h5>'+globalInfo.country_pr_reserve+'</h5><h3>'+globalInfo.value_pr_reserve+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="info"><h4>Persentase Biokapasitas Defisit Tertinggi</h4><h5>'+globalInfo.country_pr_deficit+'</h5><h3>'+globalInfo.value_pr_deficit+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="info"><h4>Negara dengan Hasil (Supply) Biokapasitas Tertinggi</h4><h5>'+globalInfo.country_highest_supply+'</h5><h3>'+globalInfo.value_highest_supply+'</h3></div></div></div><div class="col"><div class="icon-box"><div class="info"><h4>Negara dengan Demand Biokapasitas Tertinggi</h4><h5>'+globalInfo.country_highest_demand+'</h5><h3>'+globalInfo.value_highest_demand+'</h3></div></div></div>';
 		
 		jQuery('#globalStateRow').html(globalState);
 		
