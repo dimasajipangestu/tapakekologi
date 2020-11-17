@@ -57,7 +57,16 @@
                                 </div>
 
                                 <div class="signin-btn">
-                                    <a class="btn btn-primary" href="stats2.html"><span>Kalkulator</span> Tapak Ekologi</a>
+                                    <a class="btn btn-primary" href="#/calculator/5fac17651e9945001e636584" data-calculatorid="5fac17651e9945001e636584"><span>Kalkulator</span> Tapak Ekologi</a>
+                                    <script>
+                                      (function() { var qs,j,q,s,d=document, gi=d.getElementById,
+                                      ce=d.createElement, gt=d.getElementsByTagName,
+                                      id="calconic_", b="https://cdn.calconic.com/static/js/";
+                                      if(!gi.call(d,id)) { j=ce.call(d,"script"); j.id=id; j.type="text/javascript"; j.async=true;
+                                      j.dataset.calconic=true;
+                                      j.src=b+"calconic.min.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(j,q) }
+                                    })();
+                                    </script>
                                 </div>
                             </nav>
                         </div>
@@ -259,43 +268,5 @@
     <script src="vendor/vmap/vmap_main.js"></script>
     <script src="vendor/datatables/datatables.min.js"></script>
 	<script src="js/scripts.js"></script>
-	<script>
-		/*
-		var config = {
-			type: 'doughnut',
-			data: {
-				datasets: [{
-					data: [
-						1194875,
-						69011,
-						178934,
-						946930,
-					],
-					backgroundColor: [
-						window.chartColors.red,
-						window.chartColors.orange,
-						window.chartColors.yellow,
-						window.chartColors.green,
-					],
-					label: 'Dataset 1'
-				}],
-				labels: [
-					'Total Cases',
-					'Total Deaths',
-					'Total Recovered',
-					'Total Active',
-				]
-			},
-			options: {
-				responsive: true
-			}
-		};
-
-		window.onload = function() {
-			var ctx = document.getElementById('chart-area').getContext('2d');
-			window.myPie = new Chart(ctx, config);
-		};
-		*/
-	</script>
 </body>
 </html>
